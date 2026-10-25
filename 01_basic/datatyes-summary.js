@@ -1,56 +1,51 @@
-//  Primitive
+// ==================== Primitive Data Types ====================
+// Primitive: directly value store karte hain (Stack memory mein)
+// 7 types: String, Number, Boolean, null, undefined, Symbol, BigInt
 
-//  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
+const score = 100          // Number
+const scoreValue = 100.3   // Number (decimal bhi number hi hai)
 
-const score = 100
-const scoreValue = 100.3
+const isLoggedIn = false   // Boolean
+const outsideTemp = null   // null: jaanbujhkar khaali value
+let userEmail;             // undefined: declare kiya par value nahi di
 
-const isLoggedIn = false
-const outsideTemp = null
-let userEmail;
-
+// Symbol: unique identifier, same value dene par bhi dono alag hote hain
 const id = Symbol('123')
 const anotherId = Symbol('123')
+console.log(id === anotherId); // false - dono alag hain chahe value same ho
 
-console.log(id === anotherId);
-
-// const bigNumber = 3456543576654356754n
-
+// const bigNumber = 3456543576654356754n // BigInt: n lagao number ke end mein
 
 
-// Reference (Non primitive)
-
+// ==================== Reference (Non-Primitive) Types ====================
+// Reference: memory address store karte hain (Heap memory mein)
 // Array, Objects, Functions
 
-// Array
+// Array: ek saath kai values store karna (index se access hoti hain)
 const heros = ["shaktiman", "naagraj", "doga"];
 
-// object
+// Object: key-value pairs mein data store karna
 let myObj = {
     name: "hitesh",
     age: 22,
 }
 
-
-// function
-const myFunction = function(){
+// Function: ek kaam ko baar baar karne ke liye code block
+const myFunction = function () {
     console.log("Hello world");
 }
 
-console.log(typeof anotherId);
+console.log(typeof anotherId); // "symbol" print karega
 
-// https://262.ecma-international.org/5.1/#sec-11.4.3
+// typeof reference: https://262.ecma-international.org/5.1/#sec-11.4.3
 
 
+// ==================== Stack vs Heap ====================
 
-//  ******************************************
+// Stack (Primitive): copy milti hai, original safe rehta hai
+let myName = "subhash"
+let anotherName = myName   // myName ki COPY ban gayi
+anotherName = "sunny"      // sirf copy badli, original nahi
 
-//stack(primitive), heap(non-primitive)
-
-let myName= "subhash"
-
-let anotherName = myName
-anotherName = "sunny"
-
-console.log(myName);
-console.log(anotherName);
+console.log(myName);      // "subhash" - original unchanged
+console.log(anotherName); // "sunny"   - copy changed

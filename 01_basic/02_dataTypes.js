@@ -1,23 +1,22 @@
-"use strict"; // treat all Js code as newer version
+"use strict"; // JS ko newer version ki tarah treat karta hai, strict rules laagu hote hain
 
+// alert( 3 + 3 ) // browser mein kaam karta hai, Node.js mein nahi
 
-// alert( 3 + 3 ) // we are using nodejs, not browser
+let name = "subhash"      // string type
+let age = 21              // number type
+let isLoggedIn = false    // boolean type
 
-let name = "subhash"
-let age = 21
-let isLoggedIn = false
+// JavaScript ke 7 Primitive Data Types:
+// number    => 2 ki power 53 tak (integers aur decimals)
+// bigint    => bahut bade numbers ke liye
+// string    => text, "" ya '' mein likha jaata hai
+// boolean   => sirf true ya false
+// null      => jaanbujhkar khaali value assign karna
+// undefined => variable declare hua par value nahi di
+// symbol    => unique identifier banana ke liye
 
+// object => non-primitive, complex data store karta hai
 
-// number => 2 to power 53
-// bigint
-// string => ""
-// boolean => true / false
-// null => standalone value
-// undefine =>
-// symbole => unique
-
-// object
-
-console.log(typeof "subhash");
-console.log(typeof null);
-
+// typeof: kisi bhi value ka data type batata hai
+console.log(typeof "subhash"); // "string" print karega
+console.log(typeof null);      // "object" print karega (JS ka ek purana bug hai yeh)
