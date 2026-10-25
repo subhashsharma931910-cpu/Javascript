@@ -40,3 +40,17 @@ const myFunction = function(){
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+//  ******************************************
+
+//stack(primitive), heap(non-primitive)
+
+let myName= "subhash"
+
+let anotherName = myName
+anotherName = "sunny"
+
+console.log(myName);
+console.log(anotherName);
